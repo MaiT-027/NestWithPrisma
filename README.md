@@ -4,9 +4,7 @@
 
 테스트를 진행하기 위해서, 로컬에 MySQL을 설치해주시고, 원하시는 포트에 DB 인스턴스를 열어주십시오.
 
-해당 DB 인스턴스 안에 test라는 이름의 DB, 그 안에 test라는 Table을 만들어주십시오.
-
-.env 파일에 Prisma 규칙을 적용한 환경변수 DATABASE_URL을 작성해주시면 됩니다.
+.env 파일에 Prisma 규칙을 적용한 환경변수 DATABASE_URL을 작성해주시면 됩니다. (DB 이름은 test입니다.)
 
 그 후, yarn / yarn prisma db push / yarn prisma generate / yarn run test:watch 순으로 실행하시면 됩니다.
 
