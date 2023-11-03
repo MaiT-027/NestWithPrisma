@@ -31,6 +31,7 @@ export class AppController {
   @ApiResponse({
     status: 201,
     description: '데이터를 데이터베이스에 추가합니다.',
+    type: CreateDTO,
   })
   create(@Body() body: CreateDTO) {
     return this.appService.create(body.name);
@@ -58,6 +59,7 @@ export class AppController {
   @ApiResponse({
     status: 200,
     description: 'id를 기반으로 데이터를 찾아 업데이트 합니다.',
+    type: UpdateDTO,
   })
   update(@Body() body: UpdateDTO) {
     return this.appService.update(body.id, body.name);

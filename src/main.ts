@@ -16,7 +16,6 @@ async function bootstrap() {
     .setTitle('테스트')
     .setDescription('테스트 설명')
     .setVersion('1.0')
-    .addTag('API')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
