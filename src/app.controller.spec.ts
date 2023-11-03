@@ -22,7 +22,7 @@ describe('AppController', () => {
 
   describe('root', () => {
     describe('getAll()', () => {
-      it('should be return all of datas in database', async () => {
+      it('should return all of datas in database', async () => {
         await appController.create({ name: 'Test1' });
         await appController.create({ name: 'Test2' });
         const result = await appController.getAll();
