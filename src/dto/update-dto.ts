@@ -1,8 +1,12 @@
-import { OmitType } from '@nestjs/mapped-types';
-import { IsNumber } from 'class-validator';
+import { IsNotEmpty } from 'class-validator';
 import { CreateDTO } from './create-dto';
+import { ApiProperty, PartialType } from '@nestjs/swagger';
 
-export class UpdateDTO extends OmitType(CreateDTO, ['id']) {
-  @IsNumber()
+export class UpdateDTO extends PartialType(CreateDTO) {
+  @ApiProperty({ required: true })
+  @IsNotEmpty()
   id: number;
+  @ApiProperty({ required: true })
+  @IsNotEmpty()
+  name: string;
 }
