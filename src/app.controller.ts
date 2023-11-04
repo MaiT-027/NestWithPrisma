@@ -12,7 +12,7 @@ import { CreateDTO } from './dto/create-dto';
 import { UpdateDTO } from './dto/update-dto';
 import { ApiBody, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 
-@ApiTags('app')
+@ApiTags('root')
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
